@@ -1,4 +1,4 @@
-# simple-socketjs
+# easy-socketjs
 
 ![onix](https://img.shields.io/badge/onix-systems-blue.svg)
 
