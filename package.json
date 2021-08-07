@@ -1,5 +1,5 @@
 {
-    "name": "@ya_myn/easy-socket",
+    "name": "essocket",
     "version": "0.0.5",
     "description": "Library for easy use of socket.io with MVC pattern",
     "main": "./lib/index.js",

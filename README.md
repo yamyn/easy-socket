@@ -7,7 +7,7 @@ Library for easy use of socket.io with MVC pattern
 # Install
 
 ```sh
-npm i easy-socket
+npm i essocket
 ```
 
 # API
@@ -61,7 +61,7 @@ npm i easy-socket
 // ./main.js
 const io = require('socket.io');
 const http = require('http');
-const { Socket } = require('easy-socket');
+const { Socket } = require('essocket');
 
 Socket.init(io(http.createServer()), options);
 ```
@@ -82,7 +82,7 @@ Socket.init(io(http.createServer()), options);
 ```javascript
 // ./modules/test/test.gateway.js
 
-const { Gateway } = require('easy-socket');
+const { Gateway } = require('essocket');
 
 const TestGateway = new Gateway('test');
 
@@ -96,7 +96,7 @@ TestGateway.addListener('hello', (ctx, data) => { return 'Hello world!' });
 // ./main.js
 const io = require('socket.io');
 const http = require('http');
-const { Socket } = require('easy-socket');
+const { Socket } = require('essocket');
 
 const TestGateway = require('./modules/test/test.gateway.js');
 
@@ -145,7 +145,7 @@ module.exports = new TestListeners();
 ```javascript
 // ./modules/test/test.gateway.js
 
-const { Gateway } = require('easy-socket');
+const { Gateway } = require('essocket');
 const TestListeners = require('./test.listeners');
 
 const TestGateway = new Gateway('test');
@@ -161,7 +161,7 @@ TestGateway.addListener('hello', TestListeners.myFirstListener);
 ```javascript
 // ./modules/test/test.emiteds.js
 
-const { Emiteds } = require('easy-socket');
+const { Emiteds } = require('essocket');
 
 class TestEmiteds extends Emiteds {
     sendMyFirstEvent(ctx, message) {
@@ -218,7 +218,7 @@ module.exports = new TestListeners();
 ```javascript
 // ./modules/test/test.validations.js
 
-const { Validator } = require('easy-socket');
+const { Validator } = require('essocket');
 
 const schema = Validator.createSchema(Joi => {
     return {
@@ -238,7 +238,7 @@ module.exports = {
 ```javascript
 // ./modules/test/test.gateway.js
 
-const { Gateway } = require('easy-socket');
+const { Gateway } = require('essocket');
 const TestListeners = require('./test.listeners');
 const { myFirstValidationSchema } = require('./test.validations');
 
@@ -270,7 +270,7 @@ TestGateway.addListener('hello', TestListeners.myFirstListener)
 
 const io = require('socket.io');
 const http = require('http');
-const { Socket } = require('easy-socket');
+const { Socket } = require('essocket');
 const jwt = require('jwt');
 
 const TestGateway = require('./modules/test/test.gateway.js');
@@ -330,7 +330,7 @@ Socket.init(io(http.createServer()), {
 
 const io = require('socket.io');
 const http = require('http');
-const { Socket, exceptions: { Exception } } = require('easy-socket');
+const { Socket, exceptions: { Exception } } = require('essocket');
 
 const TestGateway = require('./modules/test/test.gateway.js');
 
@@ -379,7 +379,7 @@ module.exports = new TestListeners();
 ```javascript
 // ./modules/test/test.gateway.js
 
-const { Gateway } = require('easy-socket');
+const { Gateway } = require('essocket');
 const TestListeners = require('./test.listeners');
 
 const TestGateway = new Gateway('test');
@@ -397,7 +397,7 @@ TestGateway.addFileListener('image', TestRoomListeners.uploadImage);
 
 const io = require('socket.io');
 const http = require('http');
-const { Socket, Uploader } = require('easy-socket');
+const { Socket, Uploader } = require('essocket');
 
 const TestGateway = require('./modules/test/test.gateway.js');
 
