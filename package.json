@@ -1,0 +1,32 @@
+{
+    "name": "easy-socket",
+    "version": "0.0.5",
+    "description": "Library for easy use of socket.io with MVC pattern",
+    "main": "./lib/index.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "mvc",
+        "websockets",
+        "socket.io",
+        "joi"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yamyn/simple-socketjs.git"
+    },
+    "author": "Yaroslav Mynchenko",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/yamyn/simple-socketjs/issues"
+    },
+    "homepage": "https://github.com/yamyn/simple-socket#readme",
+    "dependencies": {
+        "joi": "17.4.2",
+        "socketio-file-upload": "0.7.3"
+    }
+}
