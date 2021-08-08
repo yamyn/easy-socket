@@ -12,46 +12,44 @@ npm i essocket
 
 # API
 
--   [gateway](#gateway-1)
+-   [gateway](#gateway)
 
-    -   [create](#creategateway)
-    -   [use](#usegateway)
-    -   [emit](#emitevent)
+    -   [create](#create-gateway)
+    -   [use](#use-gateway)
+    -   [emit](#emit-event)
 
--   [listeners](#listeners-1)
+-   [listeners](#listeners)
 
-    -   [create](#createlisteners)
-    -   [use](#uselisteners)
+    -   [create](#create-listeners)
+    -   [use](#use-listeners)
 
--   [emiteds](#emiteds-1)
+-   [emiteds](#emiteds)
 
-    -   [create](#createemiteds)
-    -   [use](#useemiteds)
-    -   [listen](#listenevent)
+    -   [create](#create-emiteds)
+    -   [use](#use-emiteds)
+    -   [listen](#listen-emit)
 
--   [auth](#auth-1)
+-   [validation](#validation)
 
-    -   [create](#createvalidationschema)
-    -   [use](#usevalidation)
-    -   [catcherrorinclient](#catcherrorinclient-1)
+    -   [create](#create-validation-schema)
+    -   [use](#use-validation)
+    -   [catch error in client](#catch-error-in-client)
 
--   [validation](#validation-1)
+-   [auth](#auth)
 
-    -   [create](#createvalidationschema)
-    -   [use](#usevalidation)
-    -   [catcherrorinclient](#catcherrorinclient-1)
+    -   [middleware](#set-auth-middleware-and-protect-gateway)
+    -   [on client](#on-client)
 
+-   [interceptor](#interceptor)
 
--   [interceptor](#interceptor-1)
+    -   [create](#create-custom-interceptor) 
 
-    -   [create](#createcustominterceptor) 
+-   [upload files](#upload-files)
 
--   [uploadfiles](#uploadfiles-1)
-
-    -   [add](#adduploadlistener) 
-    -   [use](#useuploadlistener) 
-    -   [serveclient](#serveclientuploader)
-    -   [onclient](#onclient)  
+    -   [add](#add-upload-listener) 
+    -   [use](#use-upload-listener) 
+    -   [serveclient](#serve-client-uploader)
+    -   [on client](#on-client-1)  
 
 # Examples
 
@@ -70,8 +68,8 @@ Socket.init(io(http.createServer()), options);
 | ------------------- | -------------------        | ---------------------------------------          | --------  |
 | Server              | <code>Socket server</code> | Socket io instance                               | true      |
 | options             | <code>Object</code>        |                                                  | false     |
-| params.interceptor  | <code>Function</code>      | Transform the exception thrown from a function   | false     |
-| params.auth         | <code>Function</code>      | Middleware for authenticate client               | false     |
+| options.interceptor | <code>Function</code>      | Transform the exception thrown from a function   | false     |
+| options.auth        | <code>Function</code>      | Middleware for authenticate client               | false     |
 
 <br>
 
